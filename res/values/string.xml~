@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Share App</string>
+	<string name="search_hint">Search for app</string>
+	<string name="guide">This is an app that allows you to share the applications you install on your phone. Does not share the link to the application, but the app itself, once installed by the recipient. For share app, tap the corresponding item in the list and choose the sending mode. You can also share multiple app, do a backup or uninstall by tap and holding on a list item.</string>
+	<string name="guide_title">Help</string>
+	<string name="searchable_results">Search results for \"</string>
+	<string name="searchable_noresults">No results for \"</string>
+	<string name="share">Share \u0020</string>
+	<string name="backup_done_px">Backup of \u0020 </string>
+	<string name="backup_done_sx">\u0020 done in \u0020 </string>
+	<string name="search">Search</string>
+	<string name="uninstall">Uninstall</string>
+	<string name="loading">Backup...</string>
+	<string name="selected_one">Selected \u0020</string>
+	<string name="selected_multi">Selected \u0020</string>
+	<string name="backup_done">Backup done</string>
+	<string name="pref_root">Accesso root</string>
+	<string name="pref_root_summ">Allow this app using super user permission, if supported by system. It is used to uninstall system (factory) apps too</string>
+	<string name="settings">Settings</string>
+	<string name="uninstall_message">Do you wont to uninstall this app?</string>
+	<string name="yes">Yes</string>
+	<string name="no">No</string>
+	<string name="uninstall_done">Uninstalled</string>
+	<string name="pref_bckDir">Backup directory</string>
+	<string name="pref_bckDir_summ">Directory where baclups will saved</string>
+	<string name="selectAll">Select all</string>
+	<string name="backup_remove">Delete backup(s)</string>
+	<string name="backup_of">Backupping \u0020</string>
+	<string name="backup_finished">Backup done</string>
+	<string name="of">of</string>
+</resources>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">App Manager</string>
+	<string name="search_hint">Cerca app</string>
+	<string name="guide">Questa è un\'app che ti permette di condividere le applicazioni che installi sul tuo telefono. Non condivide il link all\'applicazione, ma l\'app stessa, installabile subito da chi la riceve. Per condividere un\'app, tocca l\'elemento della lista corrispondente e scegli il modo di invio. Puoi anche condividere più di un\'app, fare un backup (anche multiplo) o disinstallare un\'app.\</string>
+	<string name="guide_title">Guida</string>
+	<string name="searchable_results">Risultati ricerca di\"</string>
+	<string name="searchable_noresults">Nessun risultato per\"</string>
+	<string name="share">Condividi\u0020</string>
+	<string name="backup_done_px">Backup di\u0020 </string>
+	<string name="backup_done_sx">\u0020 effettuato in\u0020 </string>
+	<string name="search">Cerca</string>
+	<string name="uninstall">Disinstalla</string>
+	<string name="loading">Backup…</string>
+	<string name="selected_one">Selezionata \u0020</string>
+	<string name="selected_multi">Selezionate \u0020</string>
+	<string name="backup_done">Backup effettuato </string>
+	<string name="pref_root_summ">Permetti all\'app di accedere come super utente, se supportato dal sistema, per disinstallare anche le app preinstallate (di fabbrica)</string>
+	<string name="pref_root">Accesso root</string>
+	<string name="settings">Impostazioni</string>
+	<string name="uninstall_message">Vuoi disintallare questa applicazione?</string>
+	<string name="yes">Si</string>
+	<string name="uninstall_done">Disinstallata</string>
+	<string name="pref_bckDir">Cartella di backup</string>
+	<string name="pref_bckDir_summ">Cartella dove verranno salvati i backups</string>
+	<string name="selectAll">Seleziona tutto</string>
+	<string name="backup_remove">Elimina backup(s)</string>
+	<string name="backup_of">Backup di \u0020</string>
+	<string name="backup_finished">Backup completato</string>
+	<string name="of">\u0020su\u0020</string>
+    <string name="help_share_single">Condividere 1 app</string>
+    <string name="help_share_multi">Condividere più apps</string>
+    <string name="backup" >Backup</string>
+    <string name="restore">Ripristino</string>
+    <string name="root">Funzionalità di Root</string>
+    <string name="root_what_is">Cos\'è il root</string>
+    <string name="sharing">Condivisione</string>
+</resources>

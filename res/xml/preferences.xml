@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference
+        android:key="pref_root"
+        android:title="@string/pref_root"
+        android:summary="@string/pref_root_summ"
+        android:defaultValue="false"/>
+	<EditTextPreference
+		android:key="pref_bckDir"
+		android:title="@string/pref_bckDir"
+		android:summary="@string/pref_bckDir_summ"
+		android:defaultValue="AppBackups"
+		android:dialogTitle="@string/pref_bckDir"/>
+</PreferenceScreen>

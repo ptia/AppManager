@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/sharing">
+        <Preference android:title="@string/help_share_single" android:key="help_share_single"/>
+        <Preference android:title="@string/help_share_multi" android:key="help_share_multi"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/backup">
+        <Preference android:title="@string/backup" android:key="help_backup"/>
+        <Preference android:title="@string/restore" android:key="help_restore"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/root">
+        <Preference android:title="@string/root_what_is" android:key="help_what_is_root"/>
+        <Preference android:title="@string/root" android:key="help_root_features"/>
+    </PreferenceCategory>
+</PreferenceScreen>
