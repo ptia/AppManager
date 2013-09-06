@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 	<item android:id="@+id/menu_backup" android:title="Backup" android:showAsAction="ifRoom|withText" /><item android:id="@+id/menu_share"
-		android:icon="@android:drawable/ic_menu_share"
-		android:title="Condividi" 
+		android:title="@string/share" 
 		android:showAsAction="ifRoom"
 	/>
 	
@@ -10,7 +9,9 @@
 		android:title="@string/uninstall" 
 		android:showAsAction="ifRoom|withText"
 	/>
-	<item android:id="@+id/menu_selectAll"
+	<item android:id="@+id/menu_open_app" android:title="@string/start_app"></item><item android:id="@+id/menu_app_info" android:title="@string/app_details"></item><item android:id="@+id/menu_selectAll"
 		android:title="@string/selectAll"
 	/>
+	
+	
 </menu>

@@ -12,6 +12,7 @@ import android.app.*;
 import android.view.*;
 import android.widget.*;
 import android.preference.*;
+import android.provider.Settings;
 
 public class AppListActivity extends Activity implements AdapterView.OnItemClickListener {
   public AppAdapter adapter=null;
@@ -143,6 +144,17 @@ public class AppListActivity extends Activity implements AdapterView.OnItemClick
 		    				selectAll();
 							mode.invalidate();
 							return true;
+						case R.id.menu_app_info:
+							Intent info=new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+							info.setData(Uri.parse("package:"+cabSelectedItems.get(0).packageName));
+						case R.id.menu_open_app:
+							try {
+								Intent start=getPackageManager().getLaunchIntentForPackage(cabSelectedItems.get(0).packageName);
+								startActivity(start);
+							}
+							catch (NullPointerException e) {
+								Log.e(getPackageName(),e.toString());
+							}
 			            default:
             			    return false;
         			}
@@ -169,26 +181,41 @@ public class AppListActivity extends Activity implements AdapterView.OnItemClick
 			        // Here you can perform updates to the CAB due to
 			        // an invalidate() request
 			        //cabSelectedItems=new ArrayList<ApplicationInfo>();
+			    	PackageManager pm=getPackageManager();
 					boolean root=PreferenceManager.getDefaultSharedPreferences(AppListActivity.this).getBoolean("pref_root",false);
 					ApplicationInfo firstItem=null;
-					//MenuItem uninstall=menu.getItem(R.id.menu_uninstall);
 					try {
 						firstItem=cabSelectedItems.get(0);
 					}
 					catch (Exception e) {
+						//If no items are selected, we cannot control them, so inflate the normal menu and exit
 						menu.clear();
 						MenuInflater inflater = mode.getMenuInflater();
 						inflater.inflate(R.menu.cab, menu);
 						return true;
 					}
-					if(cabSelectedItems.size()<2&&((!firstItem.publicSourceDir.startsWith("/system"))||root)) {
-						menu.clear();
-						MenuInflater inflater = mode.getMenuInflater();
-						inflater.inflate(R.menu.cab, menu);
+					//Reload menu
+					menu.clear();
+					MenuInflater inflater = mode.getMenuInflater();
+					inflater.inflate(R.menu.cab, menu);
+					//If more then 1 app is selected, then remove info, uninstall and launch from menu and stop controls
+			        if(cabSelectedItems.size()>=2) {
+			        	Log.d(getPackageName(), "Removing menu elements info, uninstall and launch because more than 1 element is selected");
+						menu.removeItem(R.id.menu_app_info);
+						menu.removeItem(R.id.menu_uninstall);
+						menu.removeItem(R.id.menu_open_app);
+						return true;
 					}
-					else {
+					//If NOT(Only 1 app is selected AND(it is NOT system app OR root is enabled)), then remove uninstall from menu 
+					if(!((!firstItem.publicSourceDir.startsWith("/system"))||root)){
+						Log.d(getPackageName(), "Removing element uninstall");
 						menu.removeItem(R.id.menu_uninstall);
 					}
+					//If NOT(Only 1 app is selected AND it is a launchable app), then remove 
+			        if(!(pm.getLaunchIntentForPackage(firstItem.packageName)!=null)) {
+			        	Log.d(getPackageName(), "Removing element open app");
+			        	menu.removeItem(R.id.menu_open_app);
+			        }
 			        return true;
 			    }
 			});

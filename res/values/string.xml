@@ -36,4 +36,6 @@
     <string name="root">Root</string>
     <string name="root_what_is">What is Root?</string>
     <string name="sharing">Sharing</string>
+    <string name="app_details">App Details</string>
+    <string name="start_app">Open App</string>
 </resources>

@@ -35,4 +35,6 @@
     <string name="root">Funzionalità di Root</string>
     <string name="root_what_is">Cos\'è il root</string>
     <string name="sharing">Condivisione</string>
+    <string name="app_details">Dettagli app</string>
+    <string name="start_app">Apri app</string>
 </resources>

@@ -1,18 +1,32 @@
 package it.ptia.appmanager;
-import android.net.*;
-import android.content.*;
-import android.content.pm.*;
-import android.os.*;
-import android.util.*;
-import it.ptia.appmanager.R;
-import java.io.*;
-import java.nio.channels.*;
-import java.util.*;
-import android.app.*;
-import android.view.*;
-import android.widget.*;
-import android.text.*;
-import android.preference.*;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+import android.app.ActionBar;
+import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
+import android.os.Bundle;
+import android.os.Environment;
+import android.preference.PreferenceManager;
+import android.util.Log;
+import android.view.ActionMode;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AbsListView;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.SpinnerAdapter;
+import android.widget.TextView;
+import android.widget.Toast;
+
 public class BackupListActivity extends Activity implements ListView.OnItemClickListener
 {	
 	public ListView backupsListView;
