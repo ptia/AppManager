@@ -147,6 +147,8 @@ public class AppListActivity extends Activity implements AdapterView.OnItemClick
 						case R.id.menu_app_info:
 							Intent info=new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
 							info.setData(Uri.parse("package:"+cabSelectedItems.get(0).packageName));
+							startActivity(info);
+							return true;
 						case R.id.menu_open_app:
 							try {
 								Intent start=getPackageManager().getLaunchIntentForPackage(cabSelectedItems.get(0).packageName);
@@ -155,6 +157,7 @@ public class AppListActivity extends Activity implements AdapterView.OnItemClick
 							catch (NullPointerException e) {
 								Log.e(getPackageName(),e.toString());
 							}
+							return true;
 			            default:
             			    return false;
         			}
