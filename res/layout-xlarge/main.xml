@@ -15,4 +15,12 @@
     	android:stretchMode="columnWidth"
     	android:gravity="center"
 	/>
+
+	<ProgressBar
+	    android:id="@+id/main_progressbar"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_centerInParent="true"
+	    android:visibility="visible" />
+
 </RelativeLayout>

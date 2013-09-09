@@ -4,13 +4,21 @@
 	android:layout_width="fill_parent" 
 	android:layout_height="fill_parent"
 	android:orientation="vertical" >
+
 	<ListView
-		android:id="@+id/app_list"
-		android:fastScrollEnabled="true"
-		android:layout_width="match_parent" 
-		android:layout_height="match_parent"
-		android:longClickable="false"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"/>
+	    android:id="@+id/app_list"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_alignParentLeft="true"
+	    android:layout_alignParentTop="true"
+	    android:fastScrollEnabled="true"
+	    android:longClickable="false" >
+	</ListView>
+	
+	<ProgressBar
+	    android:id="@+id/main_progressbar"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_centerInParent="true"
+	    android:visibility="visible" />
 </RelativeLayout>
